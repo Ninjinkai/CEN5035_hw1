@@ -1,4 +1,4 @@
-<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="650" gr:y="245" id="sv1#page4" name="Error">
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="135" gr:y="205" id="sv1#page4" name="Error">
   <ContentUnits>
     <MultiMessageUnit gr:x="0" gr:y="0" id="sv1#page4#mssu2" name="Action failed" linkOrder="sv1#page4#mssu2#ln9">
       <Message xml:space="preserve">The action could not be completed.  Please return to the home page.</Message>
