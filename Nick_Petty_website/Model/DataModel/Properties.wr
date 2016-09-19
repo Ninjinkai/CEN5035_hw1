@@ -52,8 +52,7 @@
     <Attribute id="ent1#att3" name="Comment" type="text" db:column="comment" key="false" contentType="text/html"/>
     <Attribute id="ent1#att2" name="Visitor Name" type="string" db:column="visitor_name" key="false"/>
   </Entity>
-  <db:Database id="db1" name="PersonalSiteDB" type="MySQL" url="jdbc:mysql://52.19.51.26:3306/freeapp61" cryptedPassword="true" username="freeapp61" password="NzQ1MTg5QTQ=">
-  </db:Database>
+  <db:Database id="db1" name="PersonalSiteDB" type="MySQL" url="jdbc:mysql://52.19.51.26:3306/freeapp61" cryptedPassword="true" username="freeapp61" password="NzQ1MTg5QTQ="/>
   <Entity gr:x="240" gr:y="-5" id="ent2" name="Class" duration="persistent" attributeOrder="ent2#att5 ent2#att11 ent2#att7 ent2#att6 ent2#att8 ent2#att9 ent2#att10" db:database="db1" db:table="class">
     <Attribute id="ent2#att5" key="true" name="oid" type="integer" db:column="oid"/>
     <Attribute id="ent2#att6" name="Semester" type="string" key="false" db:column="semester"/>
