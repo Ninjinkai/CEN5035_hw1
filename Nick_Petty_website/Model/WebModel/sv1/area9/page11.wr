@@ -1,4 +1,4 @@
-<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="sv1#area9#page11" name="Nick Petty" gr:x="200" gr:y="0" landmark="true">
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="sv1#area9#page11" name="Nick Petty" gr:x="0" gr:y="0" landmark="true">
   <ContentUnits>
     <MultiMessageUnit id="sv1#area9#page11#mssu6" name="Welcome" gr:x="0" gr:y="0" messageFile="WEB-INF/descr/welcomeMsg.txt"/>
   </ContentUnits>

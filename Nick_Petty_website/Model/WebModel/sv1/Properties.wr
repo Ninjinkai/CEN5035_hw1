@@ -1,10 +1,10 @@
 <SiteView xmlns:gr="http://www.webratio.com/2006/WebML/Graph" id="sv1" name="Personal Website" landmarks="sv1#area9" homePage="sv1#area9#page11">
   <OperationUnits>
-    <CreateUnit gr:x="125" gr:y="355" id="sv1#cru1" name="Add Comment" entity="ent1">
+    <CreateUnit gr:x="70" gr:y="375" id="sv1#cru1" name="Add Comment" entity="ent1">
       <KOLink id="sv1#cru1#kln1" name="KOFlow1" to="sv1#page4" automaticCoupling="true"/>
       <OKLink id="sv1#cru1#oln1" name="OKFlow1" to="sv1#area9#page1" automaticCoupling="true"/>
     </CreateUnit>
-    <CreateUnit gr:x="460" gr:y="355" id="sv1#cru2" name="Add Class" entity="ent2">
+    <CreateUnit gr:x="540" gr:y="385" id="sv1#cru2" name="Add Class" entity="ent2">
       <KOLink id="sv1#cru2#kln2" name="KOFlow2" to="sv1#page4" automaticCoupling="true"/>
       <OKLink id="sv1#cru2#oln2" name="OKFlow2" to="sv1#area9#page2" automaticCoupling="true"/>
     </CreateUnit>
