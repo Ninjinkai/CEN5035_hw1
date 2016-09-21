@@ -25,14 +25,12 @@
       <Field id="sv1#area9#page1#enu3#fld10" name="Keyword" type="string" modifiable="true"/>
       <Link id="sv1#area9#page1#enu3#ln5" name="Search" to="sv1#area9#page1#mdu2" type="normal" validate="true">
         <LinkParameter id="sv1#area9#page1#enu3#ln5#par18" name="Keyword_Comment contains keyword" source="sv1#area9#page1#enu3#fld10" target="sv1#area9#page1#mdu2#su3#acond3"/>
-        <LinkParameter id="sv1#area9#page1#enu3#ln5#par19" name="Keyword_Date contains keyword" source="sv1#area9#page1#enu3#fld10" target="sv1#area9#page1#mdu2#su3#acond2"/>
         <LinkParameter id="sv1#area9#page1#enu3#ln5#par20" name="Keyword_Name contains keyword" source="sv1#area9#page1#enu3#fld10" target="sv1#area9#page1#mdu2#su3#acond1"/>
       </Link>
     </EntryUnit>
-    <MultiDataUnit gr:x="245" gr:y="90" id="sv1#area9#page1#mdu2" name="Search Results" entity="ent1" displayAttributes="ent1#att2 ent1#att4 ent1#att3">
+    <MultiDataUnit gr:x="240" gr:y="95" id="sv1#area9#page1#mdu2" name="Search Results" entity="ent1" displayAttributes="ent1#att2 ent1#att4 ent1#att3">
       <Selector id="sv1#area9#page1#mdu2#su3" defaultPolicy="fill" booleanOperator="or">
         <AttributesCondition id="sv1#area9#page1#mdu2#su3#acond1" name="Name contains keyword" predicate="contains" booleanOperator="or" implied="true" attributes="ent1#att2" ignoreCase="true"/>
-        <AttributesCondition id="sv1#area9#page1#mdu2#su3#acond2" name="Date contains keyword" predicate="contains" booleanOperator="or" implied="true" attributes="ent1#att4" ignoreCase="true"/>
         <AttributesCondition id="sv1#area9#page1#mdu2#su3#acond3" name="Comment contains keyword" predicate="contains" booleanOperator="or" implied="true" attributes="ent1#att3" ignoreCase="true"/>
       </Selector>
     </MultiDataUnit>
