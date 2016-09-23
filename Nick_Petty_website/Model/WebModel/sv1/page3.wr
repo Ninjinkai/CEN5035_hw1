@@ -1,0 +1,84 @@
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="sv1#page3" name="Search Results" linkOrder="sv1#page3#ln10" gr:x="930" gr:y="275">
+  <ContentUnits>
+    <MultiDataUnit id="sv1#page3#mdu4" name="Search Results" gr:x="0" gr:y="115" entity="ent2" displayAttributes="ent2#att11 ent2#att7 ent2#att6 ent2#att8 ent2#att9 ent2#att10">
+      <Selector id="sv1#page3#mdu4#su4" defaultPolicy="fill" booleanOperator="or">
+        <AttributesCondition id="sv1#page3#mdu4#su4#acond5" name="Course Label contains keyword" predicate="contains" booleanOperator="or" implied="true" ignoreCase="true" attributes="ent2#att11"/>
+        <AttributesCondition id="sv1#page3#mdu4#su4#acond6" name="Title contains keyword" predicate="contains" booleanOperator="or" implied="true" ignoreCase="true" attributes="ent2#att7"/>
+        <AttributesCondition id="sv1#page3#mdu4#su4#acond7" name="Semester contains keyword" predicate="contains" booleanOperator="or" implied="true" ignoreCase="true" attributes="ent2#att6"/>
+        <AttributesCondition id="sv1#page3#mdu4#su4#acond8" name="Instructor contains keyword" predicate="contains" booleanOperator="or" implied="true" ignoreCase="true" attributes="ent2#att8"/>
+        <AttributesCondition id="sv1#page3#mdu4#su4#acond9" name="Grade equals keyword" predicate="eq" booleanOperator="or" implied="true" ignoreCase="true" attributes="ent2#att9"/>
+        <AttributesCondition id="sv1#page3#mdu4#su4#acond10" name="Description contains keyword" predicate="contains" booleanOperator="or" implied="true" ignoreCase="true" attributes="ent2#att10"/>
+      </Selector>
+    </MultiDataUnit>
+    <EntryUnit id="sv1#page3#enu4" name="Search Course Work" linkOrder="sv1#page3#enu4#ln9" gr:showAllParts="true" gr:x="0" gr:y="0" entity="ent2" fieldOrder="sv1#page3#enu4#fld4">
+      <Field id="sv1#page3#enu4#fld4" name="Keyword" type="string" modifiable="true"/>
+      <Link id="sv1#page3#enu4#ln9" name="Search" to="sv1#page3#mdu4" type="normal" validate="true">
+        <LinkParameter id="sv1#page3#enu4#ln9#par11" name="Keyword_Comment contains keyword" source="sv1#page3#enu4#fld4" target="sv1#page3#mdu4#su4#acond6"/>
+        <LinkParameter id="sv1#page3#enu4#ln9#par12" name="Keyword_Name contains keyword" source="sv1#page3#enu4#fld4" target="sv1#page3#mdu4#su4#acond5"/>
+        <LinkParameter id="sv1#page3#enu4#ln9#par17" name="Keyword_Description contains keyword" source="sv1#page3#enu4#fld4" target="sv1#page3#mdu4#su4#acond10"/>
+        <LinkParameter id="sv1#page3#enu4#ln9#par18" name="Keyword_Grade contains keyword" source="sv1#page3#enu4#fld4" target="sv1#page3#mdu4#su4#acond9"/>
+        <LinkParameter id="sv1#page3#enu4#ln9#par19" name="Keyword_Instructor contains keyword" source="sv1#page3#enu4#fld4" target="sv1#page3#mdu4#su4#acond8"/>
+        <LinkParameter id="sv1#page3#enu4#ln9#par20" name="Keyword_Semester contains keyword" source="sv1#page3#enu4#fld4" target="sv1#page3#mdu4#su4#acond7"/>
+      </Link>
+    </EntryUnit>
+  </ContentUnits>
+  <layout:Grid containerType="grid">
+    <layout:Row>
+      <layout:Cell colspan="6">
+        <layout:Unit unitId="sv1#page3#mdu4">
+          <layout:Attribute attribute="ent2#att11"/>
+          <layout:Attribute attribute="ent2#att7"/>
+          <layout:Attribute attribute="ent2#att6"/>
+          <layout:Attribute attribute="ent2#att8"/>
+          <layout:Attribute attribute="ent2#att9"/>
+          <layout:Attribute attribute="ent2#att10"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell colspan="6">
+        <layout:Unit unitId="sv1#page3#enu4">
+          <layout:Field field="sv1#page3#enu4#fld4"/>
+          <layout:Link link="sv1#page3#enu4#ln9"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12"/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12"/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+  </layout:Grid>
+  <Link id="sv1#page3#ln10" name="Clear search" to="sv1#page7" type="normal" automaticCoupling="true" validate="true"/>
+</Page>

@@ -1,0 +1,99 @@
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="660" gr:y="-5" id="sv1#page1" name="Search Results" linkOrder="sv1#page1#ln4">
+  <ContentUnits>
+    <MultiDataUnit id="sv1#page1#mdu1" name="Search Results" gr:x="5" gr:y="95" entity="ent1" displayAttributes="ent1#att2 ent1#att4 ent1#att3">
+      <Selector id="sv1#page1#mdu1#su1" defaultPolicy="fill" booleanOperator="or">
+        <AttributesCondition id="sv1#page1#mdu1#su1#acond1" name="Name contains keyword" predicate="contains" booleanOperator="or" implied="true" attributes="ent1#att2" ignoreCase="true"/>
+        <AttributesCondition id="sv1#page1#mdu1#su1#acond2" name="Comment contains keyword" predicate="contains" booleanOperator="or" implied="true" attributes="ent1#att3" ignoreCase="true"/>
+      </Selector>
+    </MultiDataUnit>
+    <EntryUnit id="sv1#page1#enu1" name="Search Comments" linkOrder="sv1#page1#enu1#ln3" gr:showAllParts="true" gr:x="245" gr:y="5">
+      <Field id="sv1#page1#enu1#fld1" name="Keyword" type="string" modifiable="true"/>
+      <Link id="sv1#page1#enu1#ln3" name="Search" to="sv1#page1#mdu1" type="normal" validate="true">
+        <LinkParameter id="sv1#page1#enu1#ln3#par3" name="Keyword_Comment contains keyword" source="sv1#page1#enu1#fld1" target="sv1#page1#mdu1#su1#acond2"/>
+        <LinkParameter id="sv1#page1#enu1#ln3#par4" name="Keyword_Name contains keyword" source="sv1#page1#enu1#fld1" target="sv1#page1#mdu1#su1#acond1"/>
+      </Link>
+    </EntryUnit>
+    <TimeUnit id="sv1#page1#tmu1" name="Time" gr:x="160" gr:y="15">
+      <Link id="sv1#page1#tmu1#ln19" name="Flow10" to="sv1#page1#enu5" type="transport" validate="true">
+        <LinkParameter id="sv1#page1#tmu1#ln19#par27" name="Current/Input Date_Date" source="currentDate" target="sv1#page1#enu5#fld7_slot"/>
+        <LinkParameter id="sv1#page1#tmu1#ln19#par28" name="Current/Input Date_PASSING" source="currentDate" passing="true"/>
+      </Link>
+    </TimeUnit>
+    <EntryUnit id="sv1#page1#enu5" name="Leave a Comment" linkOrder="sv1#page1#enu5#ln20" gr:x="0" gr:y="0" entity="ent1" fieldOrder="sv1#page1#enu5#fld6 sv1#page1#enu5#fld5">
+      <Field id="sv1#page1#enu5#fld5" name="Comment" type="text" contentType="text/html" modifiable="true"/>
+      <Field id="sv1#page1#enu5#fld6" name="Name" type="string" contentType="text/plain" modifiable="true"/>
+      <Link id="sv1#page1#enu5#ln20" name="Submit" to="sv1#cru1" type="normal" validate="true">
+        <LinkParameter id="sv1#page1#enu5#ln20#par29" name="Comment_Comment" source="sv1#page1#enu5#fld5" target="sv1#cru1.ent1#att3"/>
+        <LinkParameter id="sv1#page1#enu5#ln20#par30" name="Comment Object_Comment Object" source="entityBean" target="sv1#cru1.entityBeans"/>
+        <LinkParameter id="sv1#page1#enu5#ln20#par31" name="Key [oid]_oid" source="key.ent1#att1" target="sv1#cru1.ent1#att1"/>
+        <LinkParameter id="sv1#page1#enu5#ln20#par32" name="Name_Visitor Name" source="sv1#page1#enu5#fld6" target="sv1#cru1.ent1#att2"/>
+        <LinkParameter id="sv1#page1#enu5#ln20#par33" name="Comment_PASSING" source="sv1#page1#enu5#fld5" passing="true"/>
+        <LinkParameter id="sv1#page1#enu5#ln20#par34" name="Name_PASSING" source="sv1#page1#enu5#fld6" passing="true"/>
+        <LinkParameter id="sv1#page1#enu5#ln20#par35" name="Date_Date" source="sv1#page1#enu5#fld7" target="sv1#cru1.ent1#att4"/>
+      </Link>
+      <Field id="sv1#page1#enu5#fld7" name="Date" type="date" preloaded="true" hidden="true"/>
+    </EntryUnit>
+  </ContentUnits>
+  <layout:Grid containerType="grid">
+    <layout:Row>
+      <layout:Cell colspan="6">
+        <layout:Unit unitId="sv1#page1#enu5">
+          <layout:Field field="sv1#page1#enu5#fld6"/>
+          <layout:Field field="sv1#page1#enu5#fld5"/>
+          <layout:Link link="sv1#page1#enu5#ln20"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell colspan="6">
+        <layout:Unit unitId="sv1#page1#enu1">
+          <layout:Field field="sv1#page1#enu1#fld1"/>
+          <layout:Link link="sv1#page1#enu1#ln3"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv1#page1#mdu1">
+          <layout:Attribute attribute="ent1#att2"/>
+          <layout:Attribute attribute="ent1#att4"/>
+          <layout:Attribute attribute="ent1#att3"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12"/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+  </layout:Grid>
+  <Link id="sv1#page1#ln4" name="Clear search" to="sv1#page5" automaticCoupling="true" type="normal" validate="true"/>
+</Page>

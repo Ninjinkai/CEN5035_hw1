@@ -1,0 +1,121 @@
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="sv1#page5" name="Comments" landmark="true" gr:x="270" gr:y="0">
+  <ContentUnits>
+    <EntryUnit id="sv1#page5#enu8" name="Leave a Comment" linkOrder="sv1#page5#enu8#ln11" gr:x="0" gr:y="85" entity="ent1" fieldOrder="sv1#page5#enu8#fld26 sv1#page5#enu8#fld25">
+      <Field id="sv1#page5#enu8#fld25" name="Comment" type="text" contentType="text/html" modifiable="true"/>
+      <Field id="sv1#page5#enu8#fld26" name="Name" type="string" contentType="text/plain" modifiable="true"/>
+      <Link id="sv1#page5#enu8#ln11" name="Submit" to="sv1#cru1" type="normal" validate="true">
+        <LinkParameter id="sv1#page5#enu8#ln11#par43" name="Comment_Comment" source="sv1#page5#enu8#fld25" target="sv1#cru1.ent1#att3"/>
+        <LinkParameter id="sv1#page5#enu8#ln11#par44" name="Comment Object_Comment Object" source="entityBean" target="sv1#cru1.entityBeans"/>
+        <LinkParameter id="sv1#page5#enu8#ln11#par45" name="Key [oid]_oid" source="key.ent1#att1" target="sv1#cru1.ent1#att1"/>
+        <LinkParameter id="sv1#page5#enu8#ln11#par46" name="Name_Visitor Name" source="sv1#page5#enu8#fld26" target="sv1#cru1.ent1#att2"/>
+        <LinkParameter id="sv1#page5#enu8#ln11#par47" name="Comment_PASSING" source="sv1#page5#enu8#fld25" passing="true"/>
+        <LinkParameter id="sv1#page5#enu8#ln11#par48" name="Name_PASSING" source="sv1#page5#enu8#fld26" passing="true"/>
+        <LinkParameter id="sv1#page5#enu8#ln11#par49" name="Date_Date" source="sv1#page5#enu8#fld27" target="sv1#cru1.ent1#att4"/>
+      </Link>
+      <Field id="sv1#page5#enu8#fld27" name="Date" type="date" preloaded="true" hidden="true"/>
+    </EntryUnit>
+    <MultiDataUnit id="sv1#page5#mdu3" name="Comments from Visitors" gr:x="0" gr:y="0" entity="ent1" displayAttributes="ent1#att2 ent1#att4 ent1#att3"/>
+    <TimeUnit id="sv1#page5#tmu2" name="Time" gr:x="160" gr:y="100">
+      <Link id="sv1#page5#tmu2#ln12" name="Flow10" to="sv1#page5#enu8" type="transport" validate="true">
+        <LinkParameter id="sv1#page5#tmu2#ln12#par50" name="Current/Input Date_Date" source="currentDate" target="sv1#page5#enu8#fld27_slot"/>
+        <LinkParameter id="sv1#page5#tmu2#ln12#par51" name="Current/Input Date_PASSING" source="currentDate" passing="true"/>
+      </Link>
+    </TimeUnit>
+    <EntryUnit id="sv1#page5#enu9" name="Search Comments" gr:showAllParts="true" gr:x="180" gr:y="0" linkOrder="sv1#page5#enu9#ln2">
+      <Field id="sv1#page5#enu9#fld28" name="Keyword" type="string" modifiable="true"/>
+      <Link id="sv1#page5#enu9#ln2" name="Search" to="sv1#page1#mdu1" type="normal" validate="true">
+        <LinkParameter id="sv1#page5#enu9#ln2#par1" name="Keyword_Comment contains keyword" source="sv1#page5#enu9#fld28" target="sv1#page1#mdu1#su1#acond2"/>
+        <LinkParameter id="sv1#page5#enu9#ln2#par2" name="Keyword_Name contains keyword" source="sv1#page5#enu9#fld28" target="sv1#page1#mdu1#su1#acond1"/>
+      </Link>
+    </EntryUnit>
+  </ContentUnits>
+  <layout:Grid containerType="grid">
+    <layout:Row>
+      <layout:Cell colspan="6">
+        <layout:Unit unitId="sv1#page5#enu8">
+          <layout:Field field="sv1#page5#enu8#fld26"/>
+          <layout:Field field="sv1#page5#enu8#fld25"/>
+          <layout:Link link="sv1#page5#enu8#ln11"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell colspan="6">
+        <layout:Unit unitId="sv1#page5#enu9">
+          <layout:Field field="sv1#page5#enu9#fld28"/>
+          <layout:Link link="sv1#page5#enu9#ln2"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv1#page5#mdu3">
+          <layout:Attribute attribute="ent1#att2"/>
+          <layout:Attribute attribute="ent1#att4"/>
+          <layout:Attribute attribute="ent1#att3"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12"/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12"/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12"/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+  </layout:Grid>
+</Page>

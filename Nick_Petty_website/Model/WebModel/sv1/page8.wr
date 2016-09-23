@@ -1,0 +1,92 @@
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="sv1#page8" name="Form Entry" landmark="false" gr:x="140" gr:y="400">
+  <ContentUnits>
+    <EntryUnit id="sv1#page8#enu10" name="Enter Profile Info" linkOrder="sv1#page8#enu10#ln16" gr:x="0" gr:y="0" entity="ent3" fieldOrder="sv1#page8#enu10#fld30 sv1#page8#enu10#fld29 sv1#page8#enu10#fld31">
+      <Field id="sv1#page8#enu10#fld29" name="Picture" type="blob" contentType="image" modifiable="true"/>
+      <Field id="sv1#page8#enu10#fld30" name="Name" type="string" modifiable="true"/>
+      <Field id="sv1#page8#enu10#fld31" name="About" type="text" contentType="text/html" modifiable="true"/>
+      <Link id="sv1#page8#enu10#ln16" name="Add info" to="sv1#cru3" type="normal" validate="true">
+        <LinkParameter id="sv1#page8#enu10#ln16#par54" name="About_About" source="sv1#page8#enu10#fld31" target="sv1#cru3.ent3#att15"/>
+        <LinkParameter id="sv1#page8#enu10#ln16#par55" name="Name_Name" source="sv1#page8#enu10#fld30" target="sv1#cru3.ent3#att13"/>
+        <LinkParameter id="sv1#page8#enu10#ln16#par56" name="Key [oid]_oid" source="key.ent3#att12" target="sv1#cru3.ent3#att12"/>
+        <LinkParameter id="sv1#page8#enu10#ln16#par57" name="Picture_Picture" source="sv1#page8#enu10#fld29" target="sv1#cru3.ent3#att14"/>
+        <LinkParameter id="sv1#page8#enu10#ln16#par58" name="Profile Object_Profile Object" source="entityBean" target="sv1#cru3.entityBeans"/>
+      </Link>
+    </EntryUnit>
+    <EntryUnit id="sv1#page8#enu11" name="Add a Class" linkOrder="sv1#page8#enu11#ln23" gr:x="145" gr:y="0" entity="ent2" fieldOrder="sv1#page8#enu11#fld32 sv1#page8#enu11#fld33 sv1#page8#enu11#fld36 sv1#page8#enu11#fld35 sv1#page8#enu11#fld37 sv1#page8#enu11#fld34">
+      <Link id="sv1#page8#enu11#ln17" name="Add Class" to="sv1#cru2" type="transport" validate="true">
+        <LinkParameter id="sv1#page8#enu11#ln17#par59" name="Class Object_Class Object" source="entityBean" target="sv1#cru2.entityBeans"/>
+        <LinkParameter id="sv1#page8#enu11#ln17#par60" name="Course Label_Course Label" source="sv1#page8#enu11#fld32" target="sv1#cru2.ent2#att11"/>
+        <LinkParameter id="sv1#page8#enu11#ln17#par61" name="Description_Description" source="sv1#page8#enu11#fld34" target="sv1#cru2.ent2#att10"/>
+        <LinkParameter id="sv1#page8#enu11#ln17#par62" name="Grade_Grade" source="sv1#page8#enu11#fld37" target="sv1#cru2.ent2#att9"/>
+        <LinkParameter id="sv1#page8#enu11#ln17#par63" name="Instructor_Instructor" source="sv1#page8#enu11#fld35" target="sv1#cru2.ent2#att8"/>
+        <LinkParameter id="sv1#page8#enu11#ln17#par64" name="Key [oid]_oid" source="key.ent2#att5" target="sv1#cru2.ent2#att5"/>
+        <LinkParameter id="sv1#page8#enu11#ln17#par65" name="Semester_Semester" source="sv1#page8#enu11#fld36" target="sv1#cru2.ent2#att6"/>
+        <LinkParameter id="sv1#page8#enu11#ln17#par66" name="Title_Title" source="sv1#page8#enu11#fld33" target="sv1#cru2.ent2#att7"/>
+      </Link>
+      <Field id="sv1#page8#enu11#fld32" name="Course Label" type="string" modifiable="true" preloaded="true"/>
+      <Field id="sv1#page8#enu11#fld33" name="Title" type="string" modifiable="true" preloaded="true"/>
+      <Field id="sv1#page8#enu11#fld34" name="Description" type="text" modifiable="true" contentType="text/html" preloaded="true"/>
+      <Field id="sv1#page8#enu11#fld35" name="Instructor" type="string" modifiable="true" preloaded="true"/>
+      <Field id="sv1#page8#enu11#fld36" name="Semester" type="string" modifiable="true" preloaded="true"/>
+      <Field id="sv1#page8#enu11#fld37" name="Grade" type="string" modifiable="true" preloaded="true"/>
+      <Link id="sv1#page8#enu11#ln23" name="Save" to="sv1#inn1" automaticCoupling="true" type="normal" validate="true"/>
+      <Link id="sv1#page8#enu11#ln25" name="Flow25" to="sv1#mfu1" type="transport" validate="true">
+        <LinkParameter id="sv1#page8#enu11#ln25#par53" name="Class Object_Class Object" source="entityBean" target="sv1#mfu1.entityBeans"/>
+        <LinkParameter id="sv1#page8#enu11#ln25#par67" name="Course Label_Course Label" source="sv1#page8#enu11#fld32" target="sv1#mfu1.ent2#att11"/>
+        <LinkParameter id="sv1#page8#enu11#ln25#par68" name="Description_Description" source="sv1#page8#enu11#fld34" target="sv1#mfu1.ent2#att10"/>
+        <LinkParameter id="sv1#page8#enu11#ln25#par69" name="Grade_Grade" source="sv1#page8#enu11#fld37" target="sv1#mfu1.ent2#att9"/>
+        <LinkParameter id="sv1#page8#enu11#ln25#par70" name="Instructor_Instructor" source="sv1#page8#enu11#fld35" target="sv1#mfu1.ent2#att8"/>
+        <LinkParameter id="sv1#page8#enu11#ln25#par71" name="Key [oid]_KeyCondition3 [oid]" source="key.ent2#att5" target="sv1#mfu1#su6#kcond3.ent2#att5"/>
+        <LinkParameter id="sv1#page8#enu11#ln25#par72" name="Semester_Semester" source="sv1#page8#enu11#fld36" target="sv1#mfu1.ent2#att6"/>
+        <LinkParameter id="sv1#page8#enu11#ln25#par73" name="Title_Title" source="sv1#page8#enu11#fld33" target="sv1#mfu1.ent2#att7"/>
+      </Link>
+    </EntryUnit>
+  </ContentUnits>
+  <layout:Grid containerType="grid">
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv1#page8#enu10">
+          <layout:Field field="sv1#page8#enu10#fld30"/>
+          <layout:Field field="sv1#page8#enu10#fld29"/>
+          <layout:Field field="sv1#page8#enu10#fld31"/>
+          <layout:Link link="sv1#page8#enu10#ln16"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv1#page8#enu11">
+          <layout:Field field="sv1#page8#enu11#fld32"/>
+          <layout:Field field="sv1#page8#enu11#fld33"/>
+          <layout:Field field="sv1#page8#enu11#fld36"/>
+          <layout:Field field="sv1#page8#enu11#fld35"/>
+          <layout:Field field="sv1#page8#enu11#fld37"/>
+          <layout:Field field="sv1#page8#enu11#fld34"/>
+          <layout:Link link="sv1#page8#enu11#ln23"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+  </layout:Grid>
+</Page>

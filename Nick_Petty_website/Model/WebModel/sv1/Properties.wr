@@ -1,12 +1,45 @@
-<SiteView xmlns:gr="http://www.webratio.com/2006/WebML/Graph" id="sv1" name="Personal Website" landmarks="sv1#area9" homePage="sv1#area9#page11">
+<SiteView xmlns:gr="http://www.webratio.com/2006/WebML/Graph" id="sv1" name="Personal Website" landmarks="sv1#page6 sv1#page5 sv1#page7" homePage="sv1#page6">
   <OperationUnits>
-    <CreateUnit gr:x="80" gr:y="345" id="sv1#cru1" name="Add Comment" entity="ent1">
+    <CreateUnit gr:x="280" gr:y="245" id="sv1#cru1" name="Add Comment" entity="ent1">
       <KOLink id="sv1#cru1#kln1" name="KOFlow1" to="sv1#page4" automaticCoupling="true"/>
-      <OKLink id="sv1#cru1#oln1" name="OKFlow1" to="sv1#area9#page1" automaticCoupling="true"/>
+      <OKLink id="sv1#cru1#oln4" name="OKFlow1" to="sv1#page5" automaticCoupling="true"/>
     </CreateUnit>
-    <CreateUnit gr:x="540" gr:y="345" id="sv1#cru2" name="Add Class" entity="ent2">
+    <CreateUnit gr:x="515" gr:y="440" id="sv1#cru2" name="Add Class" entity="ent2">
       <KOLink id="sv1#cru2#kln2" name="KOFlow2" to="sv1#page4" automaticCoupling="true"/>
-      <OKLink id="sv1#cru2#oln2" name="OKFlow2" to="sv1#area9#page2" automaticCoupling="true"/>
+      <OKLink id="sv1#cru2#oln6" name="OKFlow2" to="sv1#page7" automaticCoupling="true"/>
     </CreateUnit>
+    <CreateUnit gr:x="135" gr:y="295" id="sv1#cru3" name="Add Info" entity="ent3">
+      <OKLink id="sv1#cru3#oln5" name="OKFlow3" to="sv1#page6" automaticCoupling="true"/>
+      <KOLink id="sv1#cru3#kln4" name="KOFlow4" to="sv1#page4" automaticCoupling="true"/>
+    </CreateUnit>
+    <SelectorUnit gr:x="670" gr:y="525" id="sv1#seu1" name="Edit Class" entity="ent2" linkOrder="sv1#seu1#ln22 sv1#seu1#ln24 sv1#seu1#ln26">
+      <Selector id="sv1#seu1#su5" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="sv1#seu1#su5#kcond1" name="KeyCondition1" predicate="in" implied="false"/>
+      </Selector>
+      <Link id="sv1#seu1#ln22" name="Flow22" to="sv1#page8#enu11" type="transport" validate="true">
+        <LinkParameter id="sv1#seu1#ln22#par36" name="Course Label_Course Label" source="ent2#att11Array" target="sv1#page8#enu11#fld32_slot"/>
+        <LinkParameter id="sv1#seu1#ln22#par37" name="Description_Description" source="ent2#att10Array" target="sv1#page8#enu11#fld34_slot"/>
+        <LinkParameter id="sv1#seu1#ln22#par38" name="Grade_Grade" source="ent2#att9Array" target="sv1#page8#enu11#fld37_slot"/>
+        <LinkParameter id="sv1#seu1#ln22#par39" name="Instructor_Instructor" source="ent2#att8Array" target="sv1#page8#enu11#fld35_slot"/>
+        <LinkParameter id="sv1#seu1#ln22#par40" name="oid_Key Condition [oid]" source="ent2#att5Array" target="sv1#page8#enu11.ent2#att5"/>
+        <LinkParameter id="sv1#seu1#ln22#par41" name="Semester_Semester" source="ent2#att6Array" target="sv1#page8#enu11#fld36_slot"/>
+        <LinkParameter id="sv1#seu1#ln22#par42" name="Title_Title" source="ent2#att7Array" target="sv1#page8#enu11#fld33_slot"/>
+      </Link>
+      <Link id="sv1#seu1#ln24" name="Flow24" to="sv1#inn1" type="transport" validate="true">
+        <LinkParameter id="sv1#seu1#ln24#par52" name="oid_Input" source="ent2#att5Array" target="sv1#inn1.isnotnull"/>
+      </Link>
+      <Link id="sv1#seu1#ln26" name="Flow26" to="sv1#mfu1" automaticCoupling="true" type="transport" validate="true"/>
+    </SelectorUnit>
+    <IsNotNullUnit gr:x="510" gr:y="620" id="sv1#inn1" name="Class Exists">
+      <OKLink id="sv1#inn1#oln2" name="OKFlow2" to="sv1#mfu1" automaticCoupling="true"/>
+      <KOLink id="sv1#inn1#kln5" name="KOFlow5" to="sv1#cru2" automaticCoupling="true"/>
+    </IsNotNullUnit>
+    <ModifyUnit gr:x="355" gr:y="575" id="sv1#mfu1" name="Update Class" entity="ent2">
+      <Selector id="sv1#mfu1#su6" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="sv1#mfu1#su6#kcond3" name="KeyCondition3" predicate="in" implied="false"/>
+      </Selector>
+      <OKLink id="sv1#mfu1#oln1" name="OKFlow1" to="sv1#page7" automaticCoupling="true"/>
+      <KOLink id="sv1#mfu1#kln3" name="KOFlow3" to="sv1#page4" automaticCoupling="true"/>
+    </ModifyUnit>
   </OperationUnits>
 </SiteView>
