@@ -66,13 +66,14 @@
   <Entity gr:x="485" gr:y="45" id="ent3" name="Profile" duration="persistent" attributeOrder="ent3#att12 ent3#att13 ent3#att14 ent3#att15" db:database="db1" db:table="profile">
     <Attribute id="ent3#att12" key="true" name="oid" type="integer" db:column="oid"/>
     <Attribute id="ent3#att15" name="About" type="text" contentType="text/html" db:column="about"/>
-    <Attribute id="ent3#att14" name="Picture" type="blob" contentType="image" db:column="picture"/>
+    <Attribute id="ent3#att14" name="Picture" type="blob" contentType="image" db:column="picture" storageType="database" db:blobColumn="pictureblob"/>
     <Attribute id="ent3#att13" name="Name" type="string" db:column="name"/>
   </Entity>
-  <Entity gr:x="650" gr:y="35" id="ent4" name="Contact" duration="persistent" attributeOrder="ent4#att16 ent4#att17 ent4#att18 ent4#att19" db:database="db1" db:table="contact">
+  <Entity gr:x="650" gr:y="35" id="ent4" name="Contact" duration="persistent" attributeOrder="ent4#att16 ent4#att18 ent4#att19 ent4#att20 ent4#att21" db:database="db1" db:table="contact">
     <Attribute id="ent4#att16" key="true" name="oid" type="integer" db:column="oid"/>
-    <Attribute id="ent4#att19" name="Phone number" type="string" db:column="phone_number"/>
-    <Attribute id="ent4#att18" name="Email" type="string" db:column="email"/>
-    <Attribute id="ent4#att17" name="Name" type="string" db:column="name"/>
+    <Attribute id="ent4#att19" name="Phone number" type="string" db:column="phone_number" key="false"/>
+    <Attribute id="ent4#att18" name="Email" type="url" db:column="email" contentType="email" key="false"/>
+    <Attribute id="ent4#att21" name="GitHub" type="url" contentType="url" db:column="github"/>
+    <Attribute id="ent4#att20" name="LinkedIn" type="url" contentType="url" db:column="linkedin"/>
   </Entity>
 </DataModel>

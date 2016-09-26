@@ -1,10 +1,17 @@
-<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="sv1#page6" name="Welcome" landmark="true" gr:x="60" gr:y="0" linkOrder="sv1#page6#ln1" layout:attributeLayout="WRDefault/Default">
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="sv1#page6" name="Welcome" landmark="true" gr:x="20" gr:y="0" linkOrder="sv1#page6#ln1" layout:attributeLayout="WRDefault/Default">
   <ContentUnits>
-    <IndexUnit id="sv1#page6#inu2" name="About the Page Author" gr:x="0" gr:y="0" entity="ent3" displayAttributes="ent3#att14 ent3#att13 ent3#att15"/>
+    <PowerIndexUnit gr:x="140" gr:y="0" id="sv1#page6#pwu1" name="Contact" sortable="true" checkable="false" useCountQuery="false" entity="ent4" displayAttributes="ent4#att18 ent4#att19 ent4#att20 ent4#att21"/>
+    <PowerIndexUnit gr:x="0" gr:y="0" id="sv1#page6#pwu4" name="About the Author" sortable="true" checkable="false" useCountQuery="false" entity="ent3" displayAttributes="ent3#att14 ent3#att13 ent3#att15"/>
   </ContentUnits>
   <layout:Grid containerType="grid">
     <layout:Row>
-      <layout:Cell colspan="12"/>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv1#page6#pwu4">
+          <layout:Attribute attribute="ent3#att14"/>
+          <layout:Attribute attribute="ent3#att13"/>
+          <layout:Attribute attribute="ent3#att15"/>
+        </layout:Unit>
+      </layout:Cell>
       <layout:Cell/>
       <layout:Cell/>
       <layout:Cell/>
@@ -19,12 +26,27 @@
     </layout:Row>
     <layout:Row>
       <layout:Cell colspan="12">
-        <layout:Unit unitId="sv1#page6#inu2">
-          <layout:Attribute attribute="ent3#att14"/>
-          <layout:Attribute attribute="ent3#att13"/>
-          <layout:Attribute attribute="ent3#att15"/>
+        <layout:Unit unitId="sv1#page6#pwu1">
+          <layout:Attribute attribute="ent4#att18"/>
+          <layout:Attribute attribute="ent4#att19"/>
+          <layout:Attribute attribute="ent4#att20"/>
+          <layout:Attribute attribute="ent4#att21"/>
         </layout:Unit>
       </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12"/>
       <layout:Cell/>
       <layout:Cell/>
       <layout:Cell/>

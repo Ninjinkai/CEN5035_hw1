@@ -1,4 +1,4 @@
-<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="sv1#page5" name="Comments" landmark="true" gr:x="270" gr:y="0">
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="sv1#page5" name="Comments" landmark="true" gr:x="290" gr:y="0">
   <ContentUnits>
     <EntryUnit id="sv1#page5#enu8" name="Leave a Comment" linkOrder="sv1#page5#enu8#ln11" gr:x="0" gr:y="85" entity="ent1" fieldOrder="sv1#page5#enu8#fld26 sv1#page5#enu8#fld25">
       <Field id="sv1#page5#enu8#fld25" name="Comment" type="text" contentType="text/html" modifiable="true"/>
